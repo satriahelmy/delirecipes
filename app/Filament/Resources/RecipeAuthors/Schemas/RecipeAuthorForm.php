@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\RecipeAuthors\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 
 class RecipeAuthorForm
@@ -13,7 +14,8 @@ class RecipeAuthorForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                TextInput::make('photo')
+                FileUpload::make('photo')
+                    ->image()
                     ->required(),
             ]);
     }

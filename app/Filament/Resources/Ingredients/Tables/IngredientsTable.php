@@ -11,6 +11,7 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
 
 class IngredientsTable
 {
@@ -20,8 +21,8 @@ class IngredientsTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('photo')
-                    ->searchable(),
+                ImageColumn::make('photo')
+                    ->circular(),
                 TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()

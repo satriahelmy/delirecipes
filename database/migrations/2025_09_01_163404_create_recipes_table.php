@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->foreignId('recipe_author_id')->constrained()->cascadeOnDelete();
             $table->string('url_video');
-            $table->string('url_title');
+            $table->string('url_file');
             $table->softDeletes();
             $table->timestamps();
         });

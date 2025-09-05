@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Ingredients\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 
 class IngredientForm
@@ -13,7 +14,8 @@ class IngredientForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                TextInput::make('photo')
+                FileUpload::make('photo')
+                    ->image()
                     ->required(),
             ]);
     }
