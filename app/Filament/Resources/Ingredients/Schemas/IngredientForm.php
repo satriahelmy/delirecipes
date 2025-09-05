@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Filament\Resources\Categories\Schemas;
+namespace App\Filament\Resources\Ingredients\Schemas;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 
-class CategoryForm
+class IngredientForm
 {
     public static function configure(Schema $schema): Schema
     {
@@ -14,10 +13,7 @@ class CategoryForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                TextInput::make('slug')
-                    ->required(),
-                FileUpload::make('icon')
-                    ->image()
+                TextInput::make('photo')
                     ->required(),
             ]);
     }

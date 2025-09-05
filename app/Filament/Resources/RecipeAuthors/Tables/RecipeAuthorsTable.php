@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Categories\Tables;
+namespace App\Filament\Resources\RecipeAuthors\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -10,10 +10,9 @@ use Filament\Actions\RestoreBulkAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 
-class CategoriesTable
+class RecipeAuthorsTable
 {
     public static function configure(Table $table): Table
     {
@@ -21,9 +20,8 @@ class CategoriesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('slug')
+                TextColumn::make('photo')
                     ->searchable(),
-                ImageColumn::make('icon'),
                 TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
