@@ -47,8 +47,7 @@ class RecipeForm
                     ->preload()
                     ->required(),
                 TextInput::make('url_video')
-                    ->required()
-                    ->url(),
+                    ->required(),
                 FileUpload::make('url_file')
                     ->required()
                     ->downloadable()
