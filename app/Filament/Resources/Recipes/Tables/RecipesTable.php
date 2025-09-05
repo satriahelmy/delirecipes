@@ -13,6 +13,8 @@ use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Filters\SelectFilter;
+use App\Models\Ingredient;
+use Illuminate\Database\Eloquent\Builder;
 
 class RecipesTable
 {

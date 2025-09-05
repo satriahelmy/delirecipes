@@ -18,8 +18,6 @@ class RecipeForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                TextInput::make('slug')
-                    ->required(),
                 FileUpload::make('thumbnail')
                     ->required(),
                 Textarea::make('about')
